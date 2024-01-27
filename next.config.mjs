@@ -15,10 +15,12 @@ const withPWA = nextPWA({
     skipWaiting: true,
   },
 });
+const basePath = process.env.APP_BASE_PATH;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: isProd,
+  basePath,
   experimental: {
     optimizePackageImports: [
       'emoji-mart',
